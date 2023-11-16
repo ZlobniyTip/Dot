@@ -7,9 +7,11 @@ public class ColorChange : MonoBehaviour
     [SerializeField] private Color _color;
     [SerializeField] private float _rateChange;
 
+    private int _delayDuration = 5;
+
     private void Start()
     {
         _material.DOColor(_color, _rateChange);
-        _material.DOColor(Color.white, _rateChange).SetDelay(5);
+        _material.DOColor(Color.white, _rateChange).SetDelay(_delayDuration);
     }
 }
