@@ -5,8 +5,10 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] private float _leadTime;
 
+    private Vector3 _meaningMovement = new Vector3(10, 0, 0);
+
     private void Start()
     {
-        transform.DOMove(new Vector3(10,0,0), _leadTime);
+        transform.DOMove(_meaningMovement, _leadTime);
     }
 }

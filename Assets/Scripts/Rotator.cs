@@ -5,8 +5,10 @@ public class Rotator : MonoBehaviour
 {
     [SerializeField] private float _turnaroundTime;
 
+    private Vector3 _rotationValue = new Vector3(360, 0, 0);
+
     private void Start()
     {
-        transform.DORotate(new Vector3(360, 0, 0), _turnaroundTime, RotateMode.FastBeyond360);
+        transform.DORotate(_rotationValue, _turnaroundTime, RotateMode.FastBeyond360);
     }
 }

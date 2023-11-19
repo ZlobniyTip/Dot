@@ -8,12 +8,13 @@ public class TextChange : MonoBehaviour
 
     private int _delayBeforeAddition = 4;
     private int _delayBeforeHacking = 8;
+    private int _durationChange = 3;
 
     private void Start()
     {
-        _text.DOText("Текст изменен", 3);
-        _text.DOText(" и дополнен", 3).SetRelative().SetDelay(_delayBeforeAddition);
-        _text.DOText("Текст взломан", 3, true, ScrambleMode.All).SetDelay(_delayBeforeHacking);
+        _text.DOText("Текст изменен", _durationChange);
+        _text.DOText(" и дополнен", _durationChange).SetRelative().SetDelay(_delayBeforeAddition);
+        _text.DOText("Текст взломан", _durationChange, true, ScrambleMode.All).SetDelay(_delayBeforeHacking);
 
     }
 }
